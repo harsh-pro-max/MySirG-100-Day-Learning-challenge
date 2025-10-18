@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Harsh | 100 Days Learning Challenge - Portfolio, blog, and contact page built with semantic HTML." />
+  <title>Harsh | 100 Days Learning Challenge</title>
+
+  <style>
+    :root{
+      --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --brand:#22c55e; --accent:#38bdf8;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; background:var(--bg); color:var(--text); line-height:1.6}
+    header,footer{background:#0b1222}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin:auto; padding:16px}
+    header .top{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    nav ul{display:flex; gap:16px; list-style:none; padding:0; margin:0}
+    nav a{padding:8px 10px; border-radius:8px}
+    nav a:hover{background:#0f213a}
+    .hero{display:grid; grid-template-columns:1.2fr 1fr; gap:20px; align-items:center; padding:28px 0}
+    .card{background:var(--card); border:1px solid #1f2937; border-radius:12px; padding:16px}
+    .grid{display:grid; gap:16px}
+    .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    h1,h2,h3{line-height:1.2}
+    code,kbd,samp{background:#0b1222; padding:2px 6px; border-radius:6px; color:#cbd5e1}
+    table{width:100%; border-collapse:collapse; margin:8px 0}
+    th,td{border:1px solid #1f2937; padding:8px; text-align:left}
+    th{background:#0b1222}
+    summary{cursor:pointer; color:#d1fae5}
+    .badge{display:inline-block; padding:2px 8px; border-radius:999px; background:#0b1222; border:1px solid #1f2937; color:#a7f3d0; font-size:12px}
+    .muted{color:var(--muted)}
+    .footer{display:flex; gap:16px; flex-wrap:wrap; align-items:center; justify-content:space-between}
+    .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;padding:0;margin:-1px}
+    @media (max-width:850px){ .hero{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <!-- Accessibility skip link -->
+  <a class="visually-hidden" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container top">
+      <div style="display:flex;align-items:center;gap:10px">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" width="36" height="36" />
+        <strong>Harsh • 100 Days</strong>
+        <span class="badge">Day 11</span>
+      </div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Hero section with figure/media -->
+    <section class="hero">
+      <article class="card">
+        <header>
+          <h1>Building in public, one day at a time</h1>
+          <p class="muted">A semantic HTML page demonstrating headings, lists, tables, forms, media, and more.</p>
+        </header>
+        <p>
+          This page serves as a quick <mark>revision</mark> of key HTML tags. It’s accessible, responsive, and
+          ready for small tweaks. Press <kbd>Tab</kbd> to test focus, or resize to see layout adapt.
+        </p>
+        <p>
+          Current streak: <strong>11/100</strong>. Favorite stack: <em>HTML • CSS • JS</em>.  
+          Motto: <q cite="https://example.com">Consistency beats perfection.</q>
+        </p>
+        <details class="card" open>
+          <summary>What’s inside?</summary>
+          <ul>
+            <li>Semantic containers: <code>&lt;header&gt; &lt;main&gt; &lt;section&gt; &lt;article&gt; &lt;aside&gt; &lt;footer&gt;</code></li>
+            <li>Text/metadata: <code>&lt;h1..h6&gt; &lt;p&gt; &lt;mark&gt; &lt;abbr&gt; &lt;time&gt; &lt;cite&gt; &lt;small&gt;</code></li>
+            <li>Lists/tables: <code>&lt;ul&gt; &lt;ol&gt; &lt;dl&gt; &lt;table&gt; &lt;thead&gt; &lt;tbody&gt; &lt;tfoot&gt;</code></li>
+            <li>Media: <code>&lt;figure&gt; &lt;img&gt; &lt;audio&gt; &lt;video&gt;</code></li>
+            <li>Forms: <code>&lt;form&gt; &lt;label&gt; &lt;input&gt; &lt;select&gt; &lt;textarea&gt; &lt;button&gt;</code></li>
+          </ul>
+        </details>
+      </article>
+
+      <aside class="card" aria-label="Profile card">
+        <figure>
+          <img src="https://picsum.photos/seed/harsh/640/360" alt="Random cover" width="640" height="360" style="width:100%;border-radius:8px" />
+          <figcaption class="muted">Cover image via <cite>picsum.photos</cite></figcaption>
+        </figure>
+        <p><abbr title="Business Computer Applications">BCA</abbr> student • Exploring Web + DSA</p>
+        <p>Joined on <time datetime="2025-10-18">Oct 18, 2025</time></p>
+      </aside>
+    </section>
+
+    <!-- Projects with list and table -->
+    <section id="work" class="grid grid-3" aria-labelledby="work-title">
+      <h2 id="work-title" class="visually-hidden">Projects</h2>
+
+      <article class="card">
+        <h3>GUI Calculator</h3>
+        <p class="muted">HTML • CSS • JS</p>
+        <ul>
+          <li>Responsive layout</li>
+          <li>Keyboard support</li>
+          <li>Basic operators</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Data Structures (JS)</h3>
+        <p class="muted">SLL, DLL, Stack, soon Queue</p>
+        <table aria-label="DSA progress">
+          <thead>
+            <tr><th>Structure</th><th>Status</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Singly LL</td><td>Complete</td><td>Insert/Remove/Traverse</td></tr>
+            <tr><td>Doubly LL</td><td>Complete</td><td>Bidirectional</td></tr>
+            <tr><td>Stack</td><td>Complete</td><td>O(1) push/pop</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="3">Next: Queue, Hash Map</td></tr></tfoot>
+        </table>
+      </article>
+
+      <article class="card">
+        <h3>Python Snippets</h3>
+        <p class="muted">Walrus, Monkey Patching, File I/O</p>
+        <ol>
+          <li>Assignment expressions <code>:=</code></li>
+          <li>Runtime patching with mocks</li>
+          <li>Robust file handling with <code>with</code></li>
+        </ol>
+      </article>
+    </section>
+
+    <!-- Blog style section -->
+    <section id="blog" class="card" aria-labelledby="blog-title" style="margin-top:20px">
+      <h2 id="blog-title">Today’s Note</h2>
+      <p>
+        Revision class on HTML. Practiced forms, tables, and semantic structure.  
+        Example shortcut: wrap text in <code>&lt;mark&gt;</code> for highlights and use <code>&lt;abbr&gt;</code> for clarity.
+      </p>
+      <blockquote cite="https://mysirg.com" class="muted">
+        “Show up daily; the syntax can be Googled, the discipline cannot.”
+      </blockquote>
+      <p>
+        Sample inline elements: <small>small</small>, <sup>sup</sup>, <sub>sub</sub>, <strong>strong</strong>, <em>emphasis</em>.
+      </p>
+    </section>
+
+    <!-- Media embeds -->
+    <section class="grid" style="margin-top:20px">
+      <article class="card">
+        <h3>Audio Intro</h3>
+        <audio controls>
+          <source src="https://www.kozco.com/tech/piano2-CoolEdit.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </article>
+
+      <article class="card">
+        <h3>Video Placeholder</h3>
+        <video controls width="100%" poster="https://picsum.photos/id/1015/640/360">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </article>
+    </section>
+
+    <!-- Contact form -->
+    <section id="contact" class="card" style="margin:20px 0">
+      <h2>Contact</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Say Hello</legend>
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option>Feedback</option>
+            <option>Project Idea</option>
+            <option>Collaboration</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Type here..."></textarea>
+
+          <div style="margin:10px 0">
+            <label><input type="checkbox" name="subscribe" checked /> Subscribe to updates</label>
+          </div>
+
+          <button type="submit">Send</button>
+          <button type="reset">Reset</button>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="container footer">
+    <p>© <time datetime="2025">2025</time> Harsh. Built with semantic HTML.</p>
+    <nav aria-label="Footer">
+      <a href="#about">About</a> ·
+      <a href="#work">Projects</a> ·
+      <a href="#blog">Blog</a> ·
+      <a href="#contact">Contact</a>
+    </nav>
+  </footer>
+</body>
+</html>
