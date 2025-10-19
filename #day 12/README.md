@@ -12,7 +12,7 @@ Queues model real‑world waiting lines and power scheduling, request pipelines,
 - Tiny test to show state before/after a removal
 
 
-## Complexity (current array + shift)
+## Complexity  (current array + shift)
 - enqueue: O(1) amortized (push)
 - dequeue: O(n) due to `shift()` reindexing
 - getFront / getRear / isEmpty / getSize: O(1)
