@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+  <employee status="active">
+    <name>Rahul</name>
+    <age>25</age>
+    <gender>Male</gender>
+    <phone>4223352345</phone>
+    <address>61, North Campus, Hyderabad, India</address>
+  </employee>
+  <employee status="inactive">
+    <name>Prince</name>
+    <age>25</age>
+    <gender>Male</gender>
+    <phone>4222452345</phone>
+    <address>61, North Campus, Gujarat, India</address>
+  </employee>
+</employees>
